@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,10 +19,10 @@
     <main>
       <section class="robotron">
         <img class="robo" src="img/robotron.png" alt="Robotron" id="robotron" />
-        <figcaption class="titulo">ROBOTRON <br />2000</figcaption>
+        <h1 class="titulo">ROBOTRON <br />2000</h1>
       </section>
 
-      <section class="box estatisticas">
+      <section class="box estatisticas" aria-label="Estatísticas do robô" aria-live="polite">
         <div class="estatistica">
           <p class="estatistica-titulo">Força</p>
           <div class="estatistica-valor">
@@ -53,47 +53,47 @@
         <form action="" class="montador">
           <div class="box montador-conteudo">
             <div class="peca">
-              <label for="" class="peca-titulo">Braços</label>
+              <label for="bracos" class="peca-titulo">Braços</label>
               <div class="controle">
-                <buttom class="controle-ajuste" data-controle="-" data-peca="bracos">-</buttom>
-                <input type="text" class="controle-contador" value="00" data-contador/>
-                <buttom class="controle-ajuste" data-controle="+" data-peca="bracos">+</buttom>
+                <button type="button" class="controle-ajuste" aria-label="Remover braços" data-controle="-" data-peca="bracos">-</button>
+                <input type="text" id="bracos" readonly class="controle-contador" value="00" data-contador/>
+                <button type="button" class="controle-ajuste" aria-label="Adicionar braços" data-controle="+" data-peca="bracos">+</button>
               </div>
             </div>
             <hr class="linha" />
             <div class="peca">
-              <label for="" class="peca-titulo">Blindagem</label>
+              <label for="blindagem" class="peca-titulo">Blindagem</label>
               <div class="controle">
-                <buttom class="controle-ajuste" data-controle="-" data-peca="blindagem">-</buttom>
-                <input type="text" class="controle-contador" value="00" data-contador/>
-                <buttom class="controle-ajuste" data-controle="+" data-peca="blindagem">+</buttom>
+                <button type="button" class="controle-ajuste" aria-label="Remover blindagem" data-controle="-" data-peca="blindagem">-</button>
+                <input type="text" id="blindagem" readonly class="controle-contador" value="00" data-contador/>
+                <button type="button" class="controle-ajuste" aria-label="Adicionar blindagem" data-controle="+" data-peca="blindagem">+</button>
               </div>
             </div>
             <hr class="linha" />
             <div class="peca">
-              <label for="" class="peca-titulo">Núcleos</label>
+              <label for="nucleos" class="peca-titulo">Núcleos</label>
               <div class="controle">
-                <buttom class="controle-ajuste" data-controle="-" data-peca="nucleos">-</buttom>
-                <input type="text" class="controle-contador" value="00" data-contador/>
-                <buttom class="controle-ajuste" data-controle="+" data-peca="nucleos">+</buttom>
+                <button type="button" class="controle-ajuste" aria-label="Remover núcleos" data-controle="-" data-peca="nucleos">-</button>
+                <input type="text" id="nucleos" readonly class="controle-contador" value="00" data-contador/>
+                <button type="button" class="controle-ajuste" aria-label="Adicionar núcleos" data-controle="+" data-peca="nucleos">+</button>
               </div>
             </div>
             <hr class="linha" />
             <div class="peca">
-              <label for="" class="peca-titulo">Pernas</label>
+              <label for="pernas" class="peca-titulo">Pernas</label>
               <div class="controle">
-                <buttom class="controle-ajuste" data-controle="-" data-peca="pernas">-</buttom>
-                <input type="text" class="controle-contador" value="00" data-contador/>
-                <buttom class="controle-ajuste" data-controle="+" data-peca="pernas">+</buttom>
+                <button type="button" class="controle-ajuste" aria-label="Remover pernas" data-controle="-" data-peca="pernas">-</button>
+                <input type="text" id="pernas" readonly class="controle-contador" value="00" data-contador/>
+                <button type="button" class="controle-ajuste" aria-label="Adicionar pernas" data-controle="+" data-peca="pernas">+</button>
               </div>
             </div>
             <hr class="linha" />
             <div class="peca">
-              <label for="" class="peca-titulo">Foguetes</label>
+              <label for="foguetes" class="peca-titulo">Foguetes</label>
               <div class="controle">
-                <buttom class="controle-ajuste" data-controle="-" data-peca="foguetes">-</buttom>
-                <input type="text" class="controle-contador" value="00" data-contador/>
-                <buttom class="controle-ajuste" data-controle="+" data-peca="foguetes">+</buttom>
+                <button type="button" class="controle-ajuste" aria-label="Remover foguetes" data-controle="-" data-peca="foguetes">-</button>
+                <input type="text" id="foguetes" readonly class="controle-contador" value="00" data-contador/>
+                <button type="button" class="controle-ajuste" aria-label="Adicionar foguetes" data-controle="+" data-peca="foguetes">+</button>
               </div>
             </div>
           </div>
@@ -103,12 +103,12 @@
             class="producao"
             id="producao"
           />
-        </form>
+        <p id="status" role="status"></p></form>
         
       </section>
       
     </main>
 
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
